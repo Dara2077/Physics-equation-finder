@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="FirstPage">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="733" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="303b6" class="javax.swing.JTextArea" binding="extraNotes1UseTextArea" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Extra notes: &#10;&#10;1. Use symbols instead of the real name. For example to find velocity, type &quot;v&quot; instead of &quot;velocity&quot;&#10;2. Don't use * for multiplication. You don't need a multiplication symbol.&#10;&#10;Special symbols: &#10;&#10;1. A variable followed by &quot;-&quot; means the average of that variable. For example, p- means average momentum&#10;2. Delta will be representated by &quot;D&quot;. For example, Dx means delta x&#10;3. theta will be represented by &quot;th&quot;. For example, sinth means sintheta&#10;4. Angular displacement is represented by &quot;Dth&quot;. Angular acceleration is represented by &quot;e&quot;&#10;5. Pi is represented as &quot;pi&quot;&#10;6. Torque will be represented with T*&#10;7. Sum of the forces will be represented by &quot;Fnet&quot;. Similarly, net torque will be represented by &quot;T*net&quot;&#10;"/>
+        </properties>
+      </component>
+      <component id="ad891" class="javax.swing.JButton" binding="readyToStartButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ready to start"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
