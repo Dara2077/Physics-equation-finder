@@ -8,9 +8,10 @@ public class FirstPage extends JFrame implements ActionListener, KeyListener {
     private JTextArea extraNotes1UseTextArea;
     private JPanel panel1;
     private JButton readyToStartButton;
-    private boolean makeStop;
+    private SecondPage pg;
 
     public FirstPage(){
+        pg = new SecondPage();
         createUIComponents();
     }
 
@@ -22,13 +23,14 @@ public class FirstPage extends JFrame implements ActionListener, KeyListener {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         readyToStartButton.addActionListener(this);
         setVisible(true);
-        makeStop = true;
+        pg.setVisible(false);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         setVisible(false);
+        pg.setVisible(true);
     }
 
     @Override
@@ -46,7 +48,4 @@ public class FirstPage extends JFrame implements ActionListener, KeyListener {
 
     }
 
-    public boolean getStopped(){
-        return makeStop;
-    }
 }

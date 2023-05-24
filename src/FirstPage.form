@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="733" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <foreground color="-6243653"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="303b6" class="javax.swing.JTextArea" binding="extraNotes1UseTextArea" default-binding="true">
@@ -15,6 +17,7 @@
           </grid>
         </constraints>
         <properties>
+          <background color="-2823425"/>
           <text value="Extra notes: &#10;&#10;1. Use symbols instead of the real name. For example to find velocity, type &quot;v&quot; instead of &quot;velocity&quot;&#10;2. Don't use * for multiplication. You don't need a multiplication symbol.&#10;&#10;Special symbols: &#10;&#10;1. A variable followed by &quot;-&quot; means the average of that variable. For example, p- means average momentum&#10;2. Delta will be representated by &quot;D&quot;. For example, Dx means delta x&#10;3. theta will be represented by &quot;th&quot;. For example, sinth means sintheta&#10;4. Angular displacement is represented by &quot;Dth&quot;. Angular acceleration is represented by &quot;e&quot;&#10;5. Pi is represented as &quot;pi&quot;&#10;6. Torque will be represented with T*&#10;7. Sum of the forces will be represented by &quot;Fnet&quot;. Similarly, net torque will be represented by &quot;T*net&quot;&#10;"/>
         </properties>
       </component>
