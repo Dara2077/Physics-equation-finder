@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class FirstPage extends JFrame implements ActionListener, KeyListener {
-    private JTextArea extraNotes1UseTextArea;
+    private JTextArea tips1UseSymbolsTextArea;
     private JPanel panel1;
     private JButton readyToStartButton;
     private SecondPage pg;
@@ -18,7 +18,7 @@ public class FirstPage extends JFrame implements ActionListener, KeyListener {
     private void createUIComponents() {
         setContentPane(panel1);
         setTitle("My GUI");
-        setSize(650, 400);
+        setSize(500, 250);
         setLocation(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         readyToStartButton.addActionListener(this);

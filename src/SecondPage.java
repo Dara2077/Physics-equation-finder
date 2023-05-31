@@ -15,6 +15,12 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
     private JTextField numberToBeRemovedTextField;
     private JTextField textField2;
     private JButton removeButton;
+    private JButton alpha;
+    private JButton theta;
+    private JButton torque;
+    private JButton delta;
+    private JButton angularV;
+    private JButton pi;
     private ArrayList<String> vars = new ArrayList<>();
 
 
@@ -32,6 +38,12 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
         submitButton.addActionListener(this);
         resetButton.addActionListener(this);
         removeButton.addActionListener(this);
+        alpha.addActionListener(this);
+        theta.addActionListener(this);
+        torque.addActionListener(this);
+        delta.addActionListener(this);
+        angularV.addActionListener(this);
+        pi.addActionListener(this);
     }
 
     @Override
@@ -58,6 +70,24 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
             }
             textField2.setText("");
             addEquations();
+        }
+        else if (but.getText().equals("⍺")){
+            textField1.setText("⍺");
+        }
+        else if (but.getText().equals("θ")){
+            textField1.setText("θ");
+        }
+        else if (but.getText().equals("\uD835\uDF0F")){
+            textField1.setText("\uD835\uDF0F");
+        }
+        else if (but.getText().equals("Δ")){
+            textField1.setText("Δ");
+        }
+        else if (but.getText().equals("⍵")){
+            textField1.setText("⍵");
+        }
+        else if (but.getText().equals("\uD835\uDF0B")){
+            textField1.setText("\uD835\uDF0B");
         }
         else{
             textArea1.setText("Variables cleared");
