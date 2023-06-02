@@ -22,6 +22,7 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
     private JButton angularV;
     private JButton pi;
     private ArrayList<String> vars = new ArrayList<>();
+    private FirstPage pg;
 
 
     public SecondPage(){
@@ -30,7 +31,7 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
 
     private void createUIComponents() {
         setContentPane(panel2);
-        setTitle("My GUI");
+        setTitle("Physics Equation Finder");
         setSize(700, 350);
         setLocation(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -62,13 +63,13 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
         }
         else if (but.getText().equals("Remove")){
             int num = Integer.parseInt(textField2.getText());
+            textField2.setText("");
             vars.remove(num -1);
             textArea2.setText("");
             for (int i = 0; i < vars.size(); i ++ ){
                 int num1 = i + 1;
                 textArea2.append(num1 + ". " + vars.get(i) + "\n");
             }
-            textField2.setText("");
             addEquations();
         }
         else if (but.getText().equals("⍺")){
@@ -90,9 +91,10 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
             textField1.setText("\uD835\uDF0B");
         }
         else{
-            textArea1.setText("Variables cleared");
+            textArea1.setText("");
             textArea2.setText("");
             vars.clear();
+            VarsCleared clear = new VarsCleared();
         }
     }
 
@@ -115,10 +117,12 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
         textArea1.setText("");
         Find find = new Find();
         ArrayList<String> equations = new ArrayList<String>();
-        equations = find.applicableEquations(vars);
-        for (int i = 0; i < equations.size(); i ++){
-            int num = i + 1;
-            textArea1.append(num + ". " + equations.get(i) + "\n");
+        if (vars.size() != 0){
+            equations = find.applicableEquations(vars);
+            for (int i = 0; i < equations.size(); i ++){
+                int num = i + 1;
+                textArea1.append(num + ". " + equations.get(i) + "\n");
+            }
         }
     }
 }

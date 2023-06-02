@@ -17,7 +17,7 @@ public class FirstPage extends JFrame implements ActionListener, KeyListener {
 
     private void createUIComponents() {
         setContentPane(panel1);
-        setTitle("My GUI");
+        setTitle("Instructions");
         setSize(500, 250);
         setLocation(450, 300);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
