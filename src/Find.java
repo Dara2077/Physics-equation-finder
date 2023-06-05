@@ -19,7 +19,7 @@ public class Find{
         equations.add("Δ⍵ = ⍺-t");
         equations.add("T = 2\uD835\uDF0B/⍵");
         equations.add("x = Acos(2\uD835\uDF0Bft)");
-        equations.add("a = \uD835\uDF0Fnet/I");
+        equations.add("⍺ = \uD835\uDF0Fnet/I");
         equations.add("\uD835\uDF0F = Frsinθ");
         equations.add("L = I⍵");
         equations.add("ΔL = \uD835\uDF0Ft");

@@ -52,14 +52,21 @@ public class SecondPage extends JFrame implements ActionListener, KeyListener {
         Object source = e.getSource();
         JButton but = (JButton) source;
         if (but.getText().equals("Input")){
-            vars.add(textField1.getText());
-            textArea2.setText("");
-            for (int i = 0; i < vars.size(); i ++ ){
-                int num = i + 1;
-                textArea2.append(num + ". " + vars.get(i) + "\n");
+            if (!textField1.getText().equals("") && !textField1.getText().equals(" ")){
+                if (!vars.contains(textField1.getText())){
+                    vars.add(textField1.getText());
+                    textArea2.setText("");
+                    for (int i = 0; i < vars.size(); i ++ ){
+                        int num = i + 1;
+                        textArea2.append(num + ". " + vars.get(i) + "\n");
+                    }
+                    addEquations();
+                }
+                else{
+                    PopUp2 pop = new PopUp2();
+                }
+                textField1.setText("");
             }
-            addEquations();
-            textField1.setText("");
         }
         else if (but.getText().equals("Remove")){
             int num = Integer.parseInt(textField2.getText());
